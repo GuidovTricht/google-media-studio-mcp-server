@@ -1,0 +1,39 @@
+{
+  "name": "google-media-studio-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for using Google's Vertex AI Media Studio to generate images and videos",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc -w & node --watch dist/index.js",
+    "debug": "npx @modelcontextprotocol/inspector node --no-deprecation dist/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "video",
+    "image",
+    "generation",
+    "veo",
+    "vertex",
+    "ai",
+    "media",
+    "studio",
+    "google",
+    "vertexai",
+    "imagen",
+    "gemini"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@google/genai": "^1.6.0",
+    "@modelcontextprotocol/sdk": "^1.13.1",
+    "@types/node": "^24.0.4",
+    "dotenv": "^16.5.0",
+    "typescript": "^5.8.3",
+    "uuid": "^11.1.0",
+    "zod": "^3.25.67"
+  }
+}
