@@ -53,6 +53,82 @@ export class ImagenClient {
     return { id, filepath, generatedImage };
   }
 
+  // async generateFromImage(
+  //   image: string,
+  //   prompt: string, 
+  //   config?: ImageConfig,
+  //   mimeType?: string
+  // ): Promise<{ id: string; filepath: string; generatedImage: GeneratedImage }> {
+      
+  //   // Create generation config
+  //   const generateConfig: Record<string, any> = {};
+    
+  //   // Add optional parameters if provided
+  //   if (config?.aspectRatio) {
+  //     generateConfig.aspectRatio = config.aspectRatio;
+  //   }
+    
+  //   // Note: personGeneration is not allowed for image-to-video generation
+    
+  //   if (config?.numberOfVideos) {
+  //     generateConfig.numberOfVideos = config.numberOfVideos;
+  //   }
+    
+  //   if (config?.durationSeconds) {
+  //     generateConfig.durationSeconds = config.durationSeconds;
+  //   }
+          
+  //   if (config?.negativePrompt) {
+  //     generateConfig.negativePrompt = config.negativePrompt;
+  //   }
+
+  //   // Process the image input
+  //   const { imageBytes, mimeType: detectedMimeType } = await utils.processImageInput(image, mimeType);
+    
+  //   // Initialize request parameters with the image
+  //   const requestParams = {
+  //     model: this.model,
+  //     prompt: prompt || 'Generate an image from this image',
+  //     referenceImages: [
+  //       {
+  //         referenceImage: {
+  //           imageBytes: imageBytes,
+  //           mimeType: detectedMimeType
+  //         }
+  //       }],
+  //     config: generateConfig
+  //   };
+    
+  //   // Generate the image using Imagen
+  //   await ai.models.editImage(requestParams)
+
+
+  //   const response = await ai.models.generateImages({
+  //     model: this.model,
+  //     prompt: prompt,
+  //     config: config,
+  //   });
+    
+  //   if (!response.generatedImages || response.generatedImages.length === 0) {
+  //     throw new Error('No images generated in the response');
+  //   }
+    
+  //   const generatedImage = response.generatedImages[0];
+    
+  //   if (!generatedImage.image?.imageBytes) {
+  //     throw new Error('Generated image missing image bytes');
+  //   }
+    
+  //   // Save the generated image to disk
+  //   const { id, filepath } = await this.saveGeneratedImage(
+  //     generatedImage.image.imageBytes,
+  //     prompt,
+  //     'image/png'
+  //   );
+    
+  //   return { id, filepath, generatedImage };
+  // }
+
   /**
    * Saves a generated image to disk
    * 

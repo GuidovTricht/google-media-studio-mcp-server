@@ -5,7 +5,6 @@ import { log } from '../utils/logger.js';
 import appConfig from '../config.js';
 import fs from 'fs/promises';
 import path from 'path';
-import { v4 as uuidv4 } from 'uuid';
 
 // Initialize the Google Gen AI client for image generation
 const ai = new GoogleGenAI({ apiKey: appConfig.GOOGLE_API_KEY });

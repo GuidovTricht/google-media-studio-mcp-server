@@ -28,13 +28,14 @@ const IMAGE_STORAGE_DIR = path.join(appConfig.STORAGE_DIR, 'images');
  * @param args The tool arguments
  * @returns The tool result with generated image
  */
-export async function generateImageFromText(args: {
+export async function generateImageFromImage(args: {
+  image: string | { type: 'image'; mimeType: string; data: string };
   prompt: string;
   numberOfImages?: number;
   includeFullData?: boolean | string;
 }): Promise<CallToolResult> {
   try {
-    log.info('Generating image from text prompt');
+    log.info('Generating image from image & text prompt');
     log.verbose('Image generation parameters:', JSON.stringify(args));
     
     // Create config object
